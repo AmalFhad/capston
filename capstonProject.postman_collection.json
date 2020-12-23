@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "c6d8248d-0aa2-461e-9cc8-577aae3fc545",
+		"name": "capstonProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Driver",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/drivers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3392b376-132b-4077-bf03-fb1a772e0633",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drivers\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/drivers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6c8f7a6f-7534-4b3d-aa6c-35ecf1043ba2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers"
+							]
+						},
+						"description": "Error Get driver "
+					},
+					"response": []
+				}
+			],
+			"description": "the Driver have permissions just for get Driver ",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdPQ0VXa3g5LXQ2dUxXSmxQckhkUSJ9.eyJpc3MiOiJodHRwczovL2FtYWxmYWhhZGQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZGZiNTc5ODE2MzdiMDA2ODVjNmYwZiIsImF1ZCI6ImNhciIsImlhdCI6MTYwODY2NTYzNCwiZXhwIjoxNjA4NjcyODM0LCJhenAiOiJ4OTdWTkpuY2p3amwybGFsNTRuV2s4SVFCakl2VEx2RSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRyaXZlcnMiXX0.SEjfmOX84XJUgflssoRascR10F9GSvmsVCn4A5s7XDsvZNz5hPxPddOu8mPt5liEMyCM9xKpHqaoGlYkA0osOQrwSRCmwdf4LNVAj8MC5RBLIu-wQsXlbXoNX5nnHqzTSfalJ25K26cLct6TQ4ReMnaybH42WSFbtogbsAsuR7uLKYJ01u7ggEK1lvlPsIB0K3Wwk_lO1Fg7JMndyFHJ4AJH3uEbAI9dhfE7nxOVmdjdV2au19US2pcAwbj7TYpmot6AA7ZovKMx5Plzvv_LI4x6cKRHzXKBzaZ8jwtU40PxIGFXPpuwmo60qYBlJxyOQVW0byNmUv94McPnWPpEZA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b7a2311f-3ac2-4f05-b0ac-181a353d9ccf",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "526cc345-9907-4c57-a31d-956a0fff613f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Public ",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/cars",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9f446277-c6c9-4139-a185-fde2b20308dc",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains cars\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/cars",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/cars/2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5427d816-ddbc-47b7-a2f3-ae655cc92d6f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/cars/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cars",
+								"2"
+							]
+						},
+						"description": "Error Get car"
+					},
+					"response": []
+				}
+			],
+			"description": "Any one can access ",
+			"auth": {
+				"type": "noauth"
+			},
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Manager ",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/drivers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ba49e847-d377-4841-9588-1805716ccc7d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drivers\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers"
+							]
+						},
+						"description": "Manegar Get drivers"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/drivers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2d469999-187e-4e99-8ab8-f9a01dd15791",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains driver\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ahmed\",\n    \"age\":34\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers"
+							]
+						},
+						"description": "Post Driver"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/drivers/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "121ad7a5-0084-41c7-a8bb-30c361d7eacc",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains driver\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"age\": \"34\", \"name\": \"Ahmed\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers",
+								"1"
+							]
+						},
+						"description": "Patch Driver "
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/cars",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6536def4-61a2-42a8-b358-4b723ed0e5d3",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains car\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\":\"HW\",\n    \"color\":\"white\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/cars",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cars"
+							]
+						},
+						"description": "POST car"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/cars/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "707fcadd-a43f-4618-b108-d400273547b5",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drivers\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/cars/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cars",
+								"1"
+							]
+						},
+						"description": "Dlete car"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/drivers/2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cd9da711-441c-4674-9ee7-0b8f79d12c61",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers",
+								"2"
+							]
+						},
+						"description": "Error Get drivers"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/drivers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ba7bff8d-2f42-41c5-96fa-d6719040e867",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers"
+							]
+						},
+						"description": "Erorr Post driver"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/drivers/23",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bc0c7941-550b-499a-afcf-d54e26c0ae5f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/drivers/23",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"drivers",
+								"23"
+							]
+						},
+						"description": "Erorr Patch driver"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/cars",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a5cf4b73-7348-4728-930e-77375db4ff00",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/cars",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cars"
+							]
+						},
+						"description": "Error Post car"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/cars/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bd0ed23b-bb80-4fa6-ae53-31e16910cc11",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/cars/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cars",
+								"1"
+							]
+						},
+						"description": "Error Delete Car"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdPQ0VXa3g5LXQ2dUxXSmxQckhkUSJ9.eyJpc3MiOiJodHRwczovL2FtYWxmYWhhZGQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZGZiNTYzMDgyODRiMDA2YmI0YzljOCIsImF1ZCI6ImNhciIsImlhdCI6MTYwODY2NTYwMSwiZXhwIjoxNjA4NjcyODAxLCJhenAiOiJ4OTdWTkpuY2p3amwybGFsNTRuV2s4SVFCakl2VEx2RSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhcnMiLCJnZXQ6ZHJpdmVycyIsInBhdGNoOmRyaXZlcnMiLCJwb3N0OmNhcnMiLCJwb3N0OmRyaXZlcnMiXX0.cP6cKVF53UcaUQf5hfwUp7nJIHDCUWFg-h6IFLyzfIbtQjI_cJlLYWsvjfUy0tTW9yXehYdqJmMDPHNxtVqnUqkwoZZ5cqFBGczMI7MPG9Kyarqrw5tDhcC6Hx8jF74ganbYnIZ5mVHKy9pCTZBYCCmpvpwkQ9CGkGUB3SIPSzC1SckQIw_O9GoQRlbcl6LvHNXlccCZC49z-Uvxkr1ksVTuLufoVC_d547-ngv4s6vm6R0aYr87Hd3T194u31CYsgT3jFcmHNFFyzNGDSm1zWFKOChWlVnWgv6VwwS3_gY-bHVxq1KJFSevx2oQ9Mn9LoO-DnTQ1nNzysRJTPQs0Q",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "38127a36-43e6-4973-b300-e13a2e9aafe4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbfcf93c-6bf1-4d52-8b72-f78385138408",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
